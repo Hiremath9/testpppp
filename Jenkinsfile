@@ -17,7 +17,7 @@ pipeline{
                          def sgy=sh(script:'sh /tmp/drt.sh ${part}',returnStdout: true).trim()
                          echo "${sgy}"
                          if ("${sgy}" =~ "exceeeded"){
-                             echo "There is disk space issue stop the build"
+                             echo "There is disk space issueiii stop the build"
                              error("Build stop due todisk issue")
                          }
                          else{
