@@ -9,5 +9,13 @@ pipeline{
                 sh ("uname")
             }
         }
+        stage("test2"){
+            when{
+                changeset "test"
+            }
+            steps{
+                sh("uname -r")
+            }
+        }
     }
 }
