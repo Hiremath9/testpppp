@@ -39,6 +39,8 @@ pipeline{
             }
             steps{
                 sh("ansible localhost -m shell -a 'uptime'")
+                sh ("cp $WORKSPACE/$JOBNAME/praveen.yaml /tmp")
+                sh("ansible-playbook /tmp/praveen.yaml"
             }
         }
         
