@@ -1,0 +1,11 @@
+---
+ - hosts: localhost
+   become: yes
+   tasks:
+     - name: Run the command
+       shell:
+         "uname"
+       register: osname
+     - name: displaying the details
+       debug:
+          msg: "{{ osname }}"
