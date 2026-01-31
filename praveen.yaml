@@ -2,7 +2,7 @@
  - hosts: localhost
    become: yes
    tasks:
-     - name: Run the commandssssssssgggggg
+     - name: Run the commandssssssssggggggyyy
        shell:
          "uname"
        register: osname
